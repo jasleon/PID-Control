@@ -100,8 +100,25 @@ A well written README file can enhance your project and portfolio.  Develop your
 
 ### Describe the effect each of the P, I, D components had in your implementation
 
-TODO
+Each component of the PID controller improves the system response in closed-loop in different ways. Here's a brief summary of the purpose of each component. 
+
+- **Proportional** gain increases the control output proportionally to the error. Increasing the proportional gain will decrease the amount of time it takes the controller to steer the car to the center. However, if the proportional gain is too high, the system overshoots and it can become unstable.
+- **Integral** gain eliminates the error of the system in steady state. If the integral gain is too high, the system overshoots and it can become unstable.
+- **Derivative** gain increases the control output proportionally to the derivative of the error. This component acts as a predictor. Increasing the derivative gain will decrease the overshoot and settling time of the closed-loop system. The derivative term benefits the stability of the system.
 
 ### Describe how the final hyperparameters were chosen
 
-TODO
+The parameters have been manually adjusted by looking at the system response in the simulator. 
+
+Here's an overview of the tunning process:
+
+<p align="center">
+<img src="out/pid-table.png" />
+</p>
+<p align="center">
+    <b>Source:</b> <a href="https://www.coursera.org/lecture/intro-self-driving-cars/lesson-1-proportional-integral-derivative-pid-control-QMOMH" target="_blank">Lesson 1: Proportional-Integral-Derivative (PID) Control</a>
+</p>
+
+### Video Output
+
+Here is a [link to my video result](./out/video.mp4)
